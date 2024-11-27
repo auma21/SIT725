@@ -3,7 +3,7 @@
   "description": "Aum SIT725",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --delay 2500ms ./Week2/server.js"
+    "start": "nodemon ./Week2/server.js"
   },
   "dependencies": {
     "express": "^4.21.1"
