@@ -1,5 +1,14 @@
 {
+  "version": "1.0.0",
+  "description": "Aum SIT725",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --delay 2500ms ./Week2/server.js"
+  },
   "dependencies": {
     "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
