@@ -5,4 +5,4 @@
 node_modules/
 
 # ignore all directories with the name node_modules
-assets/
+Week1/assets/
