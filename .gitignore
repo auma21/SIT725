@@ -4,5 +4,6 @@
 # ignore all directories with the name node_modules
 node_modules/
 
-# ignore all directories with the name node_modules
-Week1/assets/
+# ignore some directories
+Week1/assets/f*
+Week2/public/assets/f*
