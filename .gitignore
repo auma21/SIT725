@@ -1,0 +1,8 @@
+# ignore all logs
+*.log
+
+# ignore all directories with the name node_modules
+node_modules/
+
+# ignore all directories with the name node_modules
+assets/
