@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "description": "Aum SIT725",
-  "main": "server.js",
+  "main": "serverCalc.js",
   "scripts": {
     "start": "nodemon ./Week2/server.js"
   },

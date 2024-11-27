@@ -21,21 +21,67 @@ app.get("/addTwoNumber", (req, res) => {
   res.json({ statuscocde: 200, data: result });
 });
 
+// Basic routes for calculator operations
+app.get("/", (req, res) => {
+  res.send(
+    "Welcome to the Calculator API! Use endpoints /add, /subtract, /multiply, /divide."
+  );
+});
+
+// Addition
+app.get("/add", (req, res) => {
+  const { n1, n2 } = req.query;
+  const result = parseFloat(n1) + parseFloat(n2);
+  res.json({ statuscocde: 200, data: result });
+});
+
+// Subtraction
+app.get("/subtract", (req, res) => {
+  const { n1, n2 } = req.query;
+  const result = parseFloat(n1) - parseFloat(n2);
+  res.json({ statuscocde: 200, data: result });
+});
+
+// Multiplication
+app.get("/multiply", (req, res) => {
+  const { n1, n2 } = req.query;
+  const result = parseFloat(n1) * parseFloat(n2);
+  res.json({ statuscocde: 200, data: result });
+});
+
+// Division
+app.get("/divide", (req, res) => {
+  const { n1, n2 } = req.query;
+  if (parseFloat(n2) === 0) {
+    result = "Division by zero is not allowed.";
+    res.json({ statuscocde: 404, result: result });
+  } else {
+    const result = parseFloat(n1) / parseFloat(n2);
+    res.json({ statuscocde: 200, data: result });
+  }
+});
+
+//GET About 
 app.get('/about', function(req, res){
   res.send("About us");
 });
 
-app.get('*', function(req, res){
-  res.send('Sorry, this is an invalid URL.');
+// POST - Create a new data
+app.post('/post', function (req, res) {
+  res.send('New post created')
+})
+
+// PUT - Update a data
+app.put('post/postid', function (req, res) {
+  res.send('PUT request to putpage')
+})
+
+// Handle invalid routes
+app.use((req, res) => {
+  result =
+    "Invalid endpoint. Please use /add, /subtract, /multiply, or /divide.";
+  res.json({ statuscocde: 404, result: result });
 });
-
-app.post('/', function (req, res) {
-  res.send('POST request to homepage')
-})
-
-app.put('/', function (req, res) {
-  res.send('PUT request to homepage')
-})
 
 app.listen(port, () => {
   console.log("App listening to: " + port);
