@@ -1,9 +1,9 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Aum SIT725",
-  "main": "serverCalc.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon ./Week2/server.js"
+    "start": "nodemon ./Week3/server.js"
   },
   "dependencies": {
     "express": "^4.21.1"

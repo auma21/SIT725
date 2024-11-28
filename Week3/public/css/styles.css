@@ -24,3 +24,11 @@
 .aum_p_16 {
   padding: 16px;
 }
+
+.user-image-size {
+  height: 64px;
+}
+
+.aum-footer {
+  padding: 8px;
+}
