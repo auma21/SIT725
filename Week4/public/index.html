@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Aum SIT725 Week Four</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aum SIT725 - Applied Software Engineering T3 2024" />
+  <meta name="author" content="Aum" />
+  <meta name="robots" content="index, follow" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="assets/f/ms-icon-144x144.png" />
+
+  <meta property="og:title" content="Aum SIT725 T3 2024" />
+  <meta property="og:description" content="Aum SIT725 - Applied Software Engineering T3 2024" />
+  <meta property="og:image" content="path-to-your-image.jpg" />
+  <meta property="og:url" content="https://www.deaking.edu.au" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Materialize CSS CDN -->
+  <!--url https://materializecss.com/collapsible.html -->
+  <!--Import materialize.css-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!------Navigation container----->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="/" class="brand-logo"><img class="user-image-size aum_p_8"
+            src="https://images.freeimages.com/image/previews/262/flat-blue-butterfly-nature-png-illustration-5702359.png"
+            alt="Attributed to Vexels.com" /></a>
+
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a target="_self" href="/about">About us</a></li>
+          <li><a target="_self" href="#">Blog</a></li>
+          <li><a target="_self" href="#">Resources</a></li>
+          <li><a target="_blank" href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <!------Welcome container----->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <h1 class="center-align" id="heading">Welcome SIT725 Week Four</h1>
+          <p class="flow-text">
+            This is my updated paragraph demostrating the use of some
+            materialize components, jQuery, NodeJs, & ExpressJs running on my local system.
+          </p>
+          <a href="#" class="btn blue">My First Button</a>
+          <a href="/about" class="btn blue">About Us</a>
+        </div>
+      </div>
+    </div>
+    <!------Welcome collapsible container----->
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>Week One
+              </div>
+              <div class="collapsible-body">
+                <span>Week one summary.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>Week Two
+              </div>
+              <div class="collapsible-body">
+                <span>Week two summary.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">home</i>Week Third
+              </div>
+              <div class="collapsible-body">
+                <span>Week three summary.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">settings_heart</i>Week Four
+              </div>
+              <div class="collapsible-body">
+                <span>Week three summary.</span>
+              </div>
+            </li>
+ 
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!------Welcome special button and dropdown container----->
+    <div class="container">
+      <div class="row">
+        <div class="col s4 center-align">
+          <a class="btn blue click-me-button" id="clickMeButton"><i class="material-icons left">auto_fix_high</i>Click
+            Me</a>
+        </div>
+
+        <div class="col s4 center-align">
+          <!-- Dropdown Trigger -->
+          <a class="dropdown-trigger btn blue" href="#" data-target="dropdown1">Dropdown</a>
+
+          <!-- Dropdown Structure -->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Option 1</a></li>
+            <li><a href="#!">Option 2</a></li>
+            <li><a href="#!">Option 3</a></li>
+          </ul>
+        </div>
+
+        <div class="col s4 center-align">
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn blue modal-trigger" href="#modal1">Modal</a>
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h4>Software Engineering</h4>
+              <p>Do you agree ?</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+
+        <div class="col s6">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator"
+                src="https://images.freeimages.com/image/previews/ceb/mountain-sun-vector-illustration-5694892.png"
+                alt="Mountain Sun">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Mountain Sun <i
+                  class="material-icons right">more_vert</i></span>
+              <p>About Mountain Sun.</p>
+            </div>
+            <div class="card-action blue">
+              <a class="white-text" href="#">More Information</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Mountain Sun<i
+                  class="material-icons right">close</i></span>
+              <p class="card-text">Mountain Sun! spot for great meditations!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s6">
+          <div class="card medium">
+            <div class="card-image">
+              <img src="https://images.freeimages.com/image/previews/41e/frosty-peaks-landscape-5694898.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Frosty Peaks Landscape<i
+                  class="material-icons right">more_vert</i></span>
+              <p>About Frosty Peaks Landscape.</p>
+            </div>
+            <div class="card-action blue">
+              <a class="white-text" href="#">More Information</a>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Frosty Peaks Landscape<i
+                  class="material-icons right">close</i></span>
+              <p class="card-text">Frosty Peaks Landscape! a spot for great inspirations!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer blue aum-footer">
+    <div class="container center-align">
+      © 2014 Copyright Aum SIT725
+    </div>
+  </footer>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Materialize JavaScript CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="./js/scripts.js"></script>
+</body>
+</html>
