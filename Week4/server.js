@@ -1,18 +1,15 @@
 const express = require("express");
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const { MongoClient, ServerApiVersion } = require("mongodb");
 const path = require("path");
+const uri = require("./db_uri");
 
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());
-//app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 
 var port = process.env.port || 3000;
-
-// db connection
-const uri =
-  "mongodb+srv://admin:4t0RU02kBzNBG2if@clustersit725.4jpqj.mongodb.net/?retryWrites=true&w=majority&appName=ClusterSIT725";
 
 // Create a MongoClient with a MongoClientOptions object
 const client = new MongoClient(uri, {
@@ -23,12 +20,12 @@ const client = new MongoClient(uri, {
   },
 });
 
-async function run() {
+async function runDBConnection() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    await client.db("test").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
@@ -37,23 +34,20 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+runDBConnection().catch(console.dir);
+
 
 // Create a pizza
-app.post("/api/menu", async (req, res, next) => {
+app.post("/api/pizza", async (req, res, next) => {
   try {
-    const newMenu = req.body;
+    const newPizza = req.body;
 
     const client = new MongoClient(uri);
-
     await client.connect();
-
     const collection = client.db("test").collection("menus");
-
-    const result = await collection.insertMany(newMenu);
-
+    const result = await collection.insertMany(newPizza);
+    
     const ids = result.insertedIds;
-
     res
       .status(200)
       .send({ message: "Menu created", ids: result.insertedCount });
@@ -72,13 +66,12 @@ app.post("/api/menu", async (req, res, next) => {
 });
 
 // TODO: Read
-app.get("/api/menus", async (req, res) => {
-    try {
-        
+app.get("/api/menu", async (req, res) => {
+    try {        
         const client = new MongoClient(uri);
         await client.connect();
-        const menus = client.db("test").collection("menus").find({});
-        res.status(200).json(menus);
+        const menuName = client.db("test").collection("menus").findOne({name: res});
+        console.log(menuName);
       } catch (err) {
         res
           .status(500)
@@ -86,7 +79,7 @@ app.get("/api/menus", async (req, res) => {
       } finally {
         // Close the connection
         await client.close();
-      }
+      }      
 });
 
 // Update

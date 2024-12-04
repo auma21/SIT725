@@ -126,15 +126,43 @@
 
         <div class="col s4 center-align">
           <!-- Modal Trigger -->
-          <a class="waves-effect waves-light btn blue modal-trigger" href="#modal1">Modal</a>
+          <a class="waves-effect waves-light btn blue modal-trigger" href="#modal1">Add Pizza</a>
           <!-- Modal Structure -->
           <div id="modal1" class="modal">
             <div class="modal-content">
-              <h4>Software Engineering</h4>
-              <p>Do you agree ?</p>
+              <form class="col s12">
+
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input placeholder="Placeholder" id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                  </div>  
+                  <div class="input-field col s6">
+                    <input placeholder="0" type="number" class="validate">
+                    <label for="email">Price</label>
+                  </div>         
+                </div>
+
+                <div class="row">
+                  <!-----for select ingredients -->
+                  <div class="input-field col s12">
+                    <select multiple blue>
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                      <option value="1">Option 4</option>
+                      <option value="2">Option 5</option>
+                      <option value="3">Option 6</option>
+                    </select>
+                    <label>Select Ingredients</label>
+                  </div>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+              <a href="#!" class="modal-close waves-effect waves-green btn green">Submit</a>
+              <a href="#!" class="modal-close waves-effect waves-green btn red">Cancel</a>
             </div>
           </div>
         </div>

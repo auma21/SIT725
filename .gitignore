@@ -2,5 +2,8 @@
 *.log
 *.hintrc
 
+Week4/db_uri.js
+
 # ignore all directories with the name node_modules
 node_modules/
+AumPract
