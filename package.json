@@ -3,12 +3,16 @@
   "description": "Aum SIT725",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./Week4/server.js"
+    "start": "nodemon ./Week5/app.js"
   },
   "dependencies": {
+    "audit": "^0.0.6",
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "express": "^4.21.1",
-    "mongodb": "^6.11.0"
+    "fix": "^0.0.6",
+    "mongodb": "^6.11.0",
+    "sanitize-html": "^2.13.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"

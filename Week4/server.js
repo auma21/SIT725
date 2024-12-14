@@ -36,7 +36,6 @@ async function runDBConnection() {
 }
 runDBConnection().catch(console.dir);
 
-
 // Create a pizza
 app.post("/api/pizza", async (req, res, next) => {
   try {
