@@ -3,18 +3,24 @@
   "description": "Aum SIT725",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./Week5/app.js"
+    "test": "mocha",
+    "start": "nodemon ./Week6/app.js"
   },
   "dependencies": {
     "audit": "^0.0.6",
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.3",
+    "debug": "^4.4.0",
     "express": "^4.21.1",
     "fix": "^0.0.6",
-    "mongodb": "^6.11.0",
-    "sanitize-html": "^2.13.1"
+    "helmet": "^8.0.0",
+    "joi": "^17.13.3",
+    "mongodb": "^6.11.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1",
+    "mongodb-memory-server": "^10.1.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7",
+    "request": "^2.88.2"
   }
 }

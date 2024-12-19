@@ -2,10 +2,11 @@
 *.log
 *.hintrc
 
-Week4/db_uri.js
-Week5/util/db_uri.js
+/**Week4/db_uri.js
+/**Week5/util/db_uri.js
 
 # ignore all directories with the name node_modules
-node_modules/
-AumPract
-StickyApp
+/**/node_modules/**
+/**/AumPract/**
+/**StickyApp/**
+/**BookingApp/**
