@@ -4,9 +4,17 @@
 
 /**Week4/db_uri.js
 /**Week5/util/db_uri.js
+/**Week6/util/db_uri.js
 
 # ignore all directories with the name node_modules
 /**/node_modules/**
 /**/AumPract/**
 /**StickyApp/**
 /**BookingApp/**
+
+/**Week5/util/**
+/**Week6/util/**
+/**Week7/util/**
+/**Week8/util/**
+
+/**/package-lock.json

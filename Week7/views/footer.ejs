@@ -1,0 +1,31 @@
+<footer class="page-footer blue aum-footer">
+    <div class="container center-align">
+      © 2014 Copyright Aum SIT725
+    </div>
+  </footer>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Materialize JavaScript CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="/js/scripts.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io(); // Initialize Socket.io client
+
+    socket.on('connect', () => {
+        console.log('Socket connected:', socket.id); // Log the socket ID on connection
+    });
+
+    socket.on('randomNumber', (number) => {
+        console.log('Random Number:', number); // Log the random number to the console
+        $('#random-numbers').append(`<li>${number}</li>`); // Append the random number to the list
+    });
+
+    socket.on('disconnect', () => {
+        console.log('Socket disconnected'); // Log when the socket disconnects
+    });
+</script>
+</body>
+</html>

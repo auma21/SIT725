@@ -1,31 +1,23 @@
 const uri = require("./db_uri").uri;
-
 const { MongoClient, ServerApiVersion } = require("mongodb");
+
+const aum_db_Name = "week6";
 
 let _db;
 
-// Create a new MongoClient instance
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-
-const connectDB = callback => {
-    client.connect()
-    .then(client =>{
-      _db = client.db();
-      console.log("Connected to MongoDB");
-      callback();
-    })  
-  .catch(error => {
-    console.error("Failed to connect to MongoDB", error);
-    throw error;
-  })
+const connectDB = async () => {
+  // Create a new MongoClient instance
+  const client = new MongoClient(uri, {
+    serverApi: {
+      version: ServerApiVersion.v1,
+      strict: true,
+      deprecationErrors: true,
+    },
+  });
+  await client.connect();
+  _db = client.db(aum_db_Name);
+  console.log("Connected to MongoDB");
 };
-
 
 const getDB = () => {
   if (_db) {
@@ -34,5 +26,9 @@ const getDB = () => {
   throw "No database found";
 };
 
-exports.connectDB = connectDB;
-exports.getDB = getDB;
+const closeDB = async (client) => {
+  await client.close();
+  console.log("MongoDB connection closed");
+};
+
+module.exports = { connectDB, getDB, closeDB };
